@@ -1,16 +1,14 @@
 # TASK 1 #
 
 def is_valid(queen_positions):
-    if queen_positions != []:
-        for p in queen_positions:
-            test = queen_positions
-            test.remove(p)
-            if p not in test: # check repetition
-                if p[0] in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'] and 0 < int(p[1]) <= 8:
-                    return True
-            return False # instead of two else statements
-    else:
-        return True
+    for p in queen_positions:
+        test = queen_positions
+        test.remove(p)
+        if p not in test: # check repetition
+            if p[0] in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'] and 0 < int(p[1]) <= 8:
+                return True
+        return False # instead of two else statements
+    return True
 
 
 # TASK 2 #
